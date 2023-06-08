@@ -1,5 +1,7 @@
 # About
 
+[![GitHub Actions Build](https://github.com/rgl/security-add-trusted-cert/actions/workflows/build.yml/badge.svg)](https://github.com/rgl/security-add-trusted-cert/actions/workflows/build.yml)
+
 This will import and trust a given CA certificate without user interaction.
 
 This is required because on macOS Big Sur 11.3+ the traditional certificate installation method, `security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain example.com-ca-crt.pem`, started to require user interaction, which prevents automated certificate installations.
