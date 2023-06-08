@@ -52,7 +52,7 @@ if CommandLine.arguments.count > 1 {
             print("Saving certificate")
             try? saveCertificateToKeyChain(certificate!, certificateLabel: "Test")
         } else {
-            print("Certificate can't be read")
+            print("ERROR: Unknown error while reading the \(CommandLine.arguments[1]) file.")
         }
     } catch {
         print("ERROR: Unexpected error while reading the \(CommandLine.arguments[1]) file. \(error)")
