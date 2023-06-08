@@ -55,7 +55,7 @@ if CommandLine.arguments.count > 1 {
             print("Certificate can't be read")
         }
     } catch {
-        print("Unable to read the file \(CommandLine.arguments[1])")
+        print("ERROR: Unexpected error while reading the \(CommandLine.arguments[1]) file. \(error)")
     }
 } else {
     print("Usage: \(CommandLine.arguments[0]) [cert.file]")
