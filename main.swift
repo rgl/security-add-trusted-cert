@@ -51,6 +51,7 @@ if CommandLine.arguments.count > 1 {
         if certificate != nil {
             print("Saving certificate")
             try? saveCertificateToKeyChain(certificate!, certificateLabel: "Test")
+            exit(0)
         } else {
             print("ERROR: Unknown error while reading the \(CommandLine.arguments[1]) file.")
         }
@@ -60,3 +61,4 @@ if CommandLine.arguments.count > 1 {
 } else {
     print("Usage: \(CommandLine.arguments[0]) [cert.file]")
 }
+exit(1)
