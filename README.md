@@ -1,6 +1,7 @@
 # About
 
 [![GitHub Actions Build](https://github.com/rgl/security-add-trusted-cert/actions/workflows/build.yml/badge.svg)](https://github.com/rgl/security-add-trusted-cert/actions/workflows/build.yml)
+[![Cirrus CI Build Status](https://api.cirrus-ci.com/github/rgl/security-add-trusted-cert.svg)](https://cirrus-ci.com/github/rgl/security-add-trusted-cert)
 
 This will import and trust a given CA certificate without user interaction.
 

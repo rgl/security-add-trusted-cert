@@ -1,0 +1,6 @@
+macos_instance:
+  image: ghcr.io/cirruslabs/macos-ventura-base:latest
+task:
+  script: make
+  binaries_artifacts:
+    path: security-add-trusted-cert
