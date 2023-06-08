@@ -1,8 +1,6 @@
 import Foundation
 import Security
 
-let certInfo: CFDictionary
-
 enum SecurityError: Error {
     case generalError
 }
