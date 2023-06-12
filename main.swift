@@ -43,7 +43,17 @@ func getCertificateFromString(stringData: String) throws -> SecCertificate {
     throw SecurityError.generalError
 }
 
-if CommandLine.arguments.count > 1 {
+if CommandLine.arguments.count != 2 {
+    print("Usage: \(CommandLine.arguments[0]) [cert.file]")
+    print("Usage: \(CommandLine.arguments[0]) --version")
+    exit(1)
+}
+
+if (CommandLine.arguments[1] == "--version") {
+    let version = "dev"
+    print(version)
+    exit(0)
+} else {
     let fileURL = URL(fileURLWithPath: CommandLine.arguments[1])
     do {
         let certData = try Data(contentsOf: fileURL)
@@ -58,7 +68,5 @@ if CommandLine.arguments.count > 1 {
     } catch {
         print("ERROR: Unexpected error while reading the \(CommandLine.arguments[1]) file. \(error)")
     }
-} else {
-    print("Usage: \(CommandLine.arguments[0]) [cert.file]")
 }
 exit(1)

@@ -2,7 +2,7 @@ macos_instance:
   image: ghcr.io/cirruslabs/macos-ventura-base:latest
 task:
   script: |
-    make
+    make APP_VERSION="$CIRRUS_TAG"
     mv security-add-trusted-cert security-add-trusted-cert-arm64
   binaries_artifacts:
     path: security-add-trusted-cert-arm64
